@@ -1,14 +1,4 @@
-import React from 'react';
-import './App.css';
-import Header from './Header';
-import Footer from './Footer';
-import ListPokemons from './ListPokemons';
-import LastCapturedPokemons from './LastCapturedPokemons';
-import FirePokemons from './FirePokemons';
-import RandomPokemon from './RandomPokemon';
-
-
-function App() {
+const ListPokemons = () => {
 const pokemons = [
     {
         id: 1,
@@ -83,15 +73,17 @@ const pokemons = [
     ];
 
 return (
-<div >
-    <header><Header /></header>
-    <ListPokemons />
-    <LastCapturedPokemons pokemons={pokemons} />
-    <FirePokemons pokemons={pokemons}/>
-    <RandomPokemon pokemons={pokemons}/>
-    <Footer />
-</div>
+<section style={{ backgroundColor: 'violet' }}>
+    {pokemons.map((pokemon) => (
+    <article key={pokemon.id}>
+        <h2>{pokemon.name}</h2>
+        <p>Type: {pokemon.type}</p>
+        <p>Capture Date: {pokemon.capturedAt}</p>
+        <img src={pokemon.image} alt={pokemon.name} />
+    </article>
+    ))}
+</section>
 );
-}
+};
 
-export default App;
+export default ListPokemons;
