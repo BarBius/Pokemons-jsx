@@ -85,7 +85,7 @@ const pokemons = [
 return (
 <div >
     <header><Header /></header>
-    <ListPokemons />
+    <ListPokemons pokemons={pokemons}/>
     <LastCapturedPokemons pokemons={pokemons} />
     <FirePokemons pokemons={pokemons}/>
     <RandomPokemon pokemons={pokemons}/>
