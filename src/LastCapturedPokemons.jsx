@@ -1,7 +1,7 @@
 const LastCapturedPokemons = ({ pokemons }) => {
-    // Sort the pokemons array by capture date in descending order
+    
     const sortedPokemons = pokemons.sort((a, b) => new Date(b.capturedAt) - new Date(a.capturedAt));
-    // Take the last three elements from the sorted array
+
     const lastCapturedPokemons = sortedPokemons.slice(0, 3);
 
     return (
