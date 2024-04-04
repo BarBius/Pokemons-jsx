@@ -4,8 +4,27 @@
   align-items: center;
 }
 
+.fire-container {
+  background-color: orangered;
+  padding: 20px;
+  border: solid black;
+}
+
+
+
+.fire-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.fire-image {
+  width: 300px;
+  height: 300px;
+}
+
 header, footer {
-  margin: 20px 0;
+  
+  border: solid black 3px;
 }
 
 .App-logo {
@@ -30,6 +49,9 @@ header, footer {
   color: white;
 }
 
+.Header{
+  border: dotted solid red;
+}
 
 .App-link {
   color: #61dafb;
